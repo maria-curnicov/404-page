@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.planet-system {
+  display: grid;
+}
+
+.planet-sun {
+  width: 300px;
+}
+
+.planet {
+  animation: spinAround 15s linear infinite;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.planet-img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.animation-rotate {
+  animation: rotate 5s linear infinite;
+}
+
+.planet--mercury {
+  animation-delay: -2.5s;
+}
+
+.planet--venus {
+  animation-delay: -4s;
+}
+
+.planet--earth {
+  animation-delay: -6s;
+}
+
+.planet--mars {
+  animation-delay: -8s;
+}
+
+.planet--jupiter {
+  animation-delay: -10s;
+}
+
+.planet--saturn {
+  animation-delay: -12s;
+}
+
+.planet--uranus {
+  animation-delay: -14s;
+}
+
+.planet--neptune {
+  animation-delay: -16s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinAround {
+  0% {
+    transform: rotate(0deg) translate(300px) scale(0.5);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(300px) scale(0.5);
+  }
+}
+
+.container {
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  z-index: 999;
+  position: absolute;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  padding: 11px 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.text-section {
+  color: #fff;
+  margin: 25% auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-wrap: nowrap;
+}
+
+h1 {
+  font-size: 20rem;
+}
+
+span {
+  color: transparent;
+}
+
+h2 {
+  font-size: 50px;
+  padding-bottom: 15px;
+}
+
+button a {
+  text-decoration: none;
+  color: #111;
+}
+
+button {
+  background-color: #fff;
+  border: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.6;
+}
